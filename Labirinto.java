@@ -166,10 +166,10 @@ public class Labirinto extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
 
-        kevinSkin = redimensionarImagem("C:/Users/ferra/Downloads/LabirintoPOO/8046d7231f6d1b147cafa7ad53aaea42.jpg");
-        rudigerSkin = redimensionarImagem("C:/Users/ferra/Downloads/LabirintoPOO/ijdulbl2k9xe1.jpeg");
-        sociologoSkin = redimensionarImagem("C:/Users/ferra/Downloads/LabirintoPOO/FoEWd1-XwAANPEm.jpg");
-        batmanSkin = redimensionarImagem("C:/Users/ferra/Downloads/LabirintoPOO/download.jpg");
+        kevinSkin = redimensionarImagem("8046d7231f6d1b147cafa7ad53aaea42.jpg");
+        rudigerSkin = redimensionarImagem("ijdulbl2k9xe1.jpeg");
+        sociologoSkin = redimensionarImagem("FoEWd1-XwAANPEm.jpg");
+        batmanSkin = redimensionarImagem("download.jpg");
 
         menuPanel = new JPanel();
         menuPanel.setLayout(new GridLayout(5, 1, 10, 10));
