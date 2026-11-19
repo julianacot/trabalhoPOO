@@ -40,4 +40,39 @@ void deveDestruirParedeAoUsarPoder() {
     assertEquals('.', labirinto[0][1]);
     assertEquals(1, jogador.getUsosDePoder());
 }
+@Test
+void naoDeveConsumirPoderQuandoNaoHaParedeAdjacente() {
+
+    // Preparação
+    Posicao inicio = new Posicao(1, 1);
+    Aventureiro jogador = new Aventureiro("Jogador", inicio);
+
+    char[][] labirinto = {
+        {'.', '.', '.'},
+        {'.', 'P', '.'},
+        {'.', '.', '.'}
+    };
+
+    // Execução
+    boolean resultado = jogador.usarPoder(labirinto);
+
+    // Verificação
+    assertEquals(false, resultado);
+    assertEquals(2, jogador.getUsosDePoder());
+}
+@Test
+void deveIdentificarPerigoNaPosicaoDeDestino() {
+    Posicao destino = new Posicao(2, 3);
+    Perigo perigo = new Perigo(new Posicao(2, 3), 10);
+
+    assertEquals(true, perigo.getPosicao().equals(destino));
+}
+
+@Test
+void naoDeveIdentificarPerigoEmOutraPosicao() {
+    Posicao destino = new Posicao(2, 3);
+    Perigo perigo = new Perigo(new Posicao(4, 5), 10);
+
+    assertEquals(false, perigo.getPosicao().equals(destino));
+}
 }
